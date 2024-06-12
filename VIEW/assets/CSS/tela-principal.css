@@ -13,26 +13,30 @@ body {
 }
 
 #backgroundVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1000;
-    background-color: #000000;
-    opacity: 0.05;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1000;
+  background-color: #000000;
+  opacity: 0.05;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
 }
 
 .diagonalBackground {
   width: 100%;
   height: 100%;
-  transform: rotate(-50deg);
+  transform: rotate(100deg);
   position: absolute;
-  left: -30%;
+  right: -30%;
   top: -20%;
-  background-color: #6d6d6d26;
+  z-index: -999;
+  background-color: #ffffff0d;
 }
 
 .text-dono {
@@ -54,7 +58,7 @@ body {
 #welcome-text {
   position: absolute;
   top: 10%;
-  left: 20%;
+  left: 17.5%;
   text-align: center;
 }
 
@@ -79,10 +83,52 @@ ul {
 
 .gerenciar-modelos-text {
   color: #f1f1f1;
+  text-decoration: none;
+  transition: all 0.5s ease !important;
+}
+
+.gerenciar-modelos-text:hover {
+  color: #f1f1f1;
+  transition: all 0.5s ease !important;
 }
 
 .logo-marca {
   position: absolute;
   top: 27.5%;
-  right: 12.5%;
+  right: 12%;
+}
+
+.brandInfo {
+  z-index: 2;
+}
+
+.brandListInfo {
+  position: absolute;
+  top: 40%;
+  left: 16%;
+  font-size: 24pt;
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: #fff;
+  padding-bottom: 5px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #750085;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-text:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }

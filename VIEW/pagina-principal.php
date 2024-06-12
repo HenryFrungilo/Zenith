@@ -11,7 +11,7 @@
 
 <body class="">
     <video autoplay muted loop id="backgroundVideo">
-        <source src="./assets/VID/koenigsegg-background.mp4" type="video/mp4">
+        <source src="./assets/VID/koenigsegg-background.mp4" class="video" type="video/mp4">
         Your browser does not support HTML5 video.
     </video>
     <div class="diagonalBackground"></div>
@@ -22,10 +22,10 @@
                 Christian Von Koenigsegg
             </p>
         </div>
-        <div class="">
-            <ul>
+        <div class="brandInfo">
+            <ul class="brandListInfo">
                 <li>
-                    Dono de <b>Koenigsegg</b>
+                    Dono da <b>Koenigsegg</b>
                 </li>
                 <li>
                     Modelos Ativos
@@ -41,8 +41,8 @@
                         <b>Regera</b>
                     </li>
                 </ul>
-                <li>
-                    <a href="#" class="gerenciar-modelos-text">Gerenciar Modelos Ativos</a>
+                <li class="hover-text">
+                    <a href="http://localhost/VIEW/gerenciar-carros.php" target="_blank" class="gerenciar-modelos-text hover-underline-animation">Gerenciar Modelos Ativos</a>
                 </li>
             </ul>
             <div class="lado-direito logo-marca">
