@@ -1,0 +1,88 @@
+body {
+  color: #f1f1f1;
+  background-color: #000000 !important;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+  list-style: none;
+}
+
+#backgroundVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+    background-color: #000000;
+    opacity: 0.05;
+}
+
+.diagonalBackground {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-50deg);
+  position: absolute;
+  left: -30%;
+  top: -20%;
+  background-color: #6d6d6d26;
+}
+
+.text-dono {
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+.modelos {
+  position: absolute;
+  top: 32.5%;
+  left: 5%;
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+#welcome-text {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  text-align: center;
+}
+
+#welcome-text span,
+#welcome-text p {
+  font-size: 24pt;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  font-size: 18pt;
+}
+
+.gerenciar-modelos {
+  position: absolute;
+  top: 50.5%;
+  left: 5%;
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+.gerenciar-modelos-text {
+  color: #f1f1f1;
+}
+
+.logo-marca {
+  position: absolute;
+  top: 27.5%;
+  right: 12.5%;
+}
