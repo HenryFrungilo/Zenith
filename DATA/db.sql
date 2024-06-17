@@ -34,12 +34,13 @@ CREATE TABLE `User` (
     PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
-CREATE TABLE `User_Brands` (
+CREATE TABLE `User_brands` (
     `user_id` int(11) NOT NULL,
     `brand_id` int(11) NOT NULL,
     PRIMARY KEY (`user_id`,`brand_id`),
     KEY `brand_id` (`brand_id`),
-    CONSTRAINT `fk_user_brand_user` FOREIGN KEY (`user_id`) REFERENCES `User` (`id`)
+    CONSTRAINT `fk_user_brands_brand` FOREIGN KEY (`brand_id`) REFERENCES `Brand`(`id`),
+    CONSTRAINT `fk_user_brands_user` FOREIGN KEY (`user_id`) REFERENCES `User`(`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 ALTER TABLE `Brand` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT; 
@@ -52,11 +53,11 @@ INSERT INTO `Brand` (`id`, `name`, `foundationYear`, `country`, `logo`) VALUES
 (3, 'Lamborghini', 1963, 'Italy', 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Lamborghini_Logo.svg/1200px-Lamborghini_Logo.svg.png'),
 (4, 'Bugatti', 1909, 'France', 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Bugatti_logo.svg/1200px-Bugatti_logo.svg.png'),
 (5, 'McLaren', 1963, 'United Kingdom', 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/McLaren_logo.svg/1200px-McLaren_logo.svg.png'),
-(6, 'Audi', 1910, 'Germany', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Audi_logo_detail.svg/1200px-Audi_logo_detail.svg.png');
-(7, 'BMW', 1916, 'Germany', 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/1200px-BMW.svg.png');
-(8, 'Mercedes-Benz', 1926, 'Germany', 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Mercedes-Benz_Logo_2011.svg/1200px-Mercedes-Benz_Logo_2011.svg.png');
-(9, 'Koenigsegg', 1994, 'Sweden', 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Koenigsegg_logo.svg/1200px-Koenigsegg_logo.svg.png');
-(10, 'Pagani', 1992, 'Italy', 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Pagani_Logo.svg/1200px-Pagani_Logo.svg.png');
+(6, 'Audi', 1910, 'Germany', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Audi_logo_detail.svg/1200px-Audi_logo_detail.svg.png'),
+(7, 'BMW', 1916, 'Germany', 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/1200px-BMW.svg.png'),
+(8, 'Mercedes-Benz', 1926, 'Germany', 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Mercedes-Benz_Logo_2011.svg/1200px-Mercedes-Benz_Logo_2011.svg.png'),
+(9, 'Koenigsegg', 1994, 'Sweden', 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Koenigsegg_logo.svg/1200px-Koenigsegg_logo.svg.png'),
+(10, 'Pagani', 1992, 'Italy', 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Pagani_logo.svg/1200px-Pagani_logo.svg.png');
 
 INSERT INTO `CarModel` (`id`, `name`, `year`, `motor`, `chassis`, `licensePlate`, `color`, `brand_id`) VALUES
 (1, '911', 2021, '3.0', '123456', 'ABC-1234', 'Red', 1),
@@ -75,36 +76,15 @@ INSERT INTO `User` (`nome`) VALUES
 ('Enzo Ferrari'),
 ('Ferdinand Porsche'),
 ('Ferruccio Lamborghini'),
-('Bruce McLaren');
+('Bruce McLaren'),
 ('Horacio Pagani');
 
 INSERT INTO `User_Brands` (`user_id`, `brand_id`) VALUES
-(1, 2),
-(1, 3),
-(1, 4),
-(2, 1),
-(2, 5),
-(2, 6),
+(1, 9),
+(2, 2),
 (3, 1),
-(3, 2),
-(3, 3),
-(3, 4),
-(3, 5),
-(4, 1),
-(4, 2),
 (4, 3),
-(4, 4),
-(4, 5),
-(4, 6),
-(5, 1),
-(5, 2),
-(5, 3),
-(5, 4),
 (5, 5),
-(5, 6),
-(5, 7),
-(5, 8),
-(5, 9),
-(5, 10);
+(6, 10);
 
 COMMIT;
