@@ -10,7 +10,12 @@
 </head>
 
 <body>
-    <div class="container-fluid">
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="./assets/VID/koenigsegg-background.mp4" class="video" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <div class="diagonalBackground"></div>
+    <div class="container-fluid mainContent">
         <div class="header">
             <div class="titleContent row text-center">
                 <h1>Zenith</h1>
@@ -21,56 +26,77 @@
         </div>
         <div class="content">
             <div class="ladoEsquerdo">
-                <table>
-                    <tr>
-                        <th class="text-center">
-                            <h2 aria-colspan="5">PAGANI</h2>
-                        </th>
-                    </tr>
-                    <td>
-                        <tr class="">
+                <div class="tabelaMarca text-center">
+                    <h2 class="text-center tituloTable">PAGANI</h2>
+                    <table class="tabelaEdicaoCarros text-center">
+                        <tr class="text-center tableHeaders">
                             <th>Modelo</th>
                             <th>Cor</th>
                             <th>Preço</th>
                             <th>Quantidade</th>
                             <th>Editar</th>
                         </tr>
-                        <tr class="text-center">
-                            <td>Huayra</td>
-                            <td>Preto</td>
-                            <td>R$ 5.000.000,00</td>
-                            <td>5</td>
-                            <td><a href="#">Editar</a></td>
-                        </tr>
-                        <tr class="text-center">
-                            <td>Zonda</td>
-                            <td>Vermelho</td>
-                            <td>R$ 4.000.000,00</td>
-                            <td>3</td>
-                            <td><a href="#">Editar</a></td>
-                        </tr>
-                        <tr class="text-center">
-                            <td>Imola</td>
-                            <td>Prata</td>
-                            <td>R$ 6.000.000,00</td>
-                            <td>2</td>
-                            <td><a href="#">Editar</a></td>
-                        </tr>
-                        <tr class="text-center">
-                            <td>Tricolore</td>
-                            <td>Verde</td>
-                            <td>R$ 7.000.000,00</td>
-                            <td>1</td>
-                            <td><a href="#">Editar</a></td>
-                        </tr>
-                    </td>
-                </table>
+                        <td class="">
+                            <tr class="text-center tableRows">
+                                <td>Huayra</td>
+                                <td>Preto</td>
+                                <td>R$ 5.000.000,00</td>
+                                <td>5</td>
+                                <td><span data-bs-toggle="modal" data-bs-target="#exampleModal">Editar</span></td>
+                            </tr>
+                            <tr class="text-center tableRows">
+                                <td>Zonda</td>
+                                <td>Vermelho</td>
+                                <td>R$ 4.000.000,00</td>
+                                <td>3</td>
+                                <td><span data-bs-toggle="modal" data-bs-target="#exampleModal">Editar</span></td>
+                            </tr>
+                            <tr class="text-center tableRows">
+                                <td>Imola</td>
+                                <td>Prata</td>
+                                <td>R$ 6.000.000,00</td>
+                                <td>2</td>
+                                <td><span data-bs-toggle="modal" data-bs-target="#exampleModal">Editar</span></td>
+                            </tr>
+                            <tr class="text-center tableRows">
+                                <td>Tricolore</td>
+                                <td>Verde</td>
+                                <td>R$ 7.000.000,00</td>
+                                <td>1</td>
+                                <td><a href="#" class="editarCarro">Editar</a></td>
+                            </tr>
+                        </td>
+                    </table>
+                </div>
             </div>
             <div class="ladoDireito">
-
+                <div class="infoModeloCarroSelecionado">
+                    <h2 class="text-center nomeMarca">Pagani</h2>
+                    <img src="https://ecosetting-files.com/br/image/models/dJZaNo02jLQviHcLCPu2ADLHd1JfRF.PNG" alt="Pagani Huayra" class="modeloCarroImagem">
+                    <h2 class="text-center nomeModeloCarro"> Huayra</h2>
+                </div>
             </div>
         </div>
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="modalEditarCarro" tabindex="-1" aria-labelledby="modalEditarCarroLavel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/JS/modal.js"></script>
 </body>
 
 </html>

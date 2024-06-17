@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap");
+
+body {
+  color: #f1f1f1;
+  background-color: #000000 !important;
+  font-family: "Goldman", sans-serif;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+  list-style: none;
+}
+
+#backgroundVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1000;
+  background-color: #000000;
+  opacity: 0.05;
+}
+
+.diagonalBackground {
+  width: 100%;
+  height: 100%;
+  transform: rotate(100deg);
+  position: absolute;
+  right: -50%;
+  top: -20%;
+  z-index: -999;
+  background-color: #ffffff0d;
+}
+
+.tabelaEdicaoCarros {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+}
+
+.mainContent {
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mainContent .content {
+  min-width: 100vw;
+  width: 100vw;
+  display: flex;
+  height: 85vh;
+}
+
+.ladoEsquerdo {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 50%;
+}
+
+.ladoDireito {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 50%;
+}
+
+.tabelaMarca {
+  border: 1px solid #f1f1f1;
+  border-radius: 20px;
+  padding: 2%;
+}
+
+.tituloTable {
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.tabelaEdicaoCarros table {
+  max-width: 80%;
+  width: 80%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #f1f1f1;
+  background-color: #000000;
+  color: #f1f1f1;
+}
+
+table .tableRows {
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.tableRows td {
+  padding: 15px;
+}
+
+.tableHeaders th {
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.editarCarro {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+.modeloCarroImagem {
+  width: 100%;
+  height: 100%;
+}
+
+.logoMarca {
+  width: 100%;
+  height: 100%;
+}
+
+.colunaLogoMarca {
+  width: 15%;
+}
+
+.infoModeloCarroSelecionado {
+  width: 100%;
+}
+
+.editarInfos {
+  cursor: pointer;
+}
+
+.modeloCarroImagem {
+  transition: 0.3s;
+}
+
+.modeloCarroImagem:hover {
+  cursor: pointer;
+  filter: drop-shadow(0 0 0.5rem #f1f1f1);
+}
