@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zenith - Koenigsegg</title>
+    <link rel="stylesheet" href="./assets/CSS/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/CSS/tela-principal.css">
 </head>
@@ -43,6 +44,9 @@
                 </ul>
                 <li class="hover-text">
                     <a href="http://localhost/VIEW/gerenciar-carros.php" target="_blank" class="gerenciar-modelos-text hover-underline-animation">Gerenciar Modelos Ativos</a>
+                </li>
+                <li class="hover-text">
+                    <a href="http://localhost/VIEW/gerenciar-carros.php" target="_blank" class="gerenciar-modelos-text hover-underline-animation">Editar Marca</a>
                 </li>
             </ul>
             <div class="lado-direito logo-marca">
