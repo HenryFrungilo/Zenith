@@ -1,10 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap");
+
 * {
   color: #f1f1f1;
 }
 
 body {
   background-color: #000000 !important;
-  font-family: Arial, sans-serif;
+  font-family: "Goldman", sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
@@ -70,8 +72,13 @@ body {
   margin-top: 7%;
   border: solid 1px #e8e8e8;
   border-radius: 25px;
-  padding: 5% 4% 5% 4%; 
-  background-image: linear-gradient(180deg,#00000088 0%, #0000004d 80%, #45025ea7 100%);
+  padding: 5% 4% 5% 4%;
+  background-image: linear-gradient(
+    180deg,
+    #00000088 0%,
+    #0000004d 80%,
+    #45025ea7 100%
+  );
 }
 
 .loginHeader {
@@ -102,9 +109,10 @@ body {
 
 .is-flipped {
   transform: rotateY(180deg);
-}	
+}
 
-.cadastrar-text, .entrar-text {
+.cadastrar-text,
+.entrar-text {
   cursor: pointer;
 }
 
