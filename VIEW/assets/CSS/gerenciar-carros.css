@@ -158,6 +158,16 @@ table .tableRows {
   background-color: #000000;
 }
 
-.modal {
-  color: black !important;
+.modal, .modal-dialog, .modal-content, .modal-header, .modal-body, .modal-footer, .btn {
+  color: rgb(255, 255, 255) !important;
+  background-color: #000000 !important;
+}
+
+.modalButtonText {
+  color: #000000 !important;
+}
+
+button {
+  background-color: #000000 !important;
+  color: #f1f1f1 !important;
 }
