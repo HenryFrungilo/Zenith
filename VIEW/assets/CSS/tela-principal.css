@@ -134,3 +134,7 @@ ul {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
+.logo {
+  z-index: -999;
+}

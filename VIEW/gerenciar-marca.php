@@ -27,7 +27,7 @@
         <div class="content">
             <div class="ladoEsquerdo">
                 <div class="tabelaMarca text-center">
-                    <h2 class="text-center tituloTable">PAGANI</h2>
+                    <h2 class="text-center tituloTable">FERRARI </h2>
                     <table class="tabelaEdicaoCarros text-center">
                         <tr class="text-center tableHeaders">
                             <th>Nome</th>
@@ -38,10 +38,10 @@
                         </tr>
                         <td class="">
                             <tr class="text-center tableRows">
-                                <td>Maserati</td>
+                                <td>FERRARI</td>
                                 <td>1914</td>
                                 <td>Itália</td>
-                                <td class="colunaLogoMarca"><img src="https://inspirauto.fr/Logos/logo-Maserati.png" alt="Pagani Logo" class="logoMarca"></td>
+                                <td class="colunaLogoMarca"><img src="https://i.pinimg.com/originals/4c/ab/f1/4cabf11ca2754891d4d9d20326eca835.png" alt="Pagani Logo" class="logoMarca"></td>
                                 <td><span data-bs-toggle="modal" data-bs-target="#modalEditarCarro" class="editarInfos">Editar</span></td>
                             </tr>
                         </td>
@@ -50,7 +50,7 @@
             </div>
             <div class="ladoDireito">
                 <div class="infoModeloCarroSelecionado">
-                    <img src="https://inspirauto.fr/Logos/logo-Maserati.png" alt="Pagani Huayra" class="modeloCarroImagem">
+                    <img src="https://i.pinimg.com/originals/4c/ab/f1/4cabf11ca2754891d4d9d20326eca835.png" alt="Pagani Huayra" class="logo-marca" style="height: 25%; width: 25%; margin-left: 40%;">
                 </div>
             </div>
         </div>

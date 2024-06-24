@@ -27,7 +27,7 @@
         <div class="content">
             <div class="ladoEsquerdo">
                 <div class="tabelaMarca text-center">
-                    <h2 class="text-center tituloTable">PAGANI</h2>
+                    <h2 class="text-center tituloTable">FERRARI</h2>
                     <table class="tabelaEdicaoCarros text-center">
                         <tr class="text-center tableHeaders">
                             <th>Modelo</th>
@@ -68,7 +68,7 @@
                         </td>
                         <tr class="addCarro">
                             <td colspan="5" class="botaoAddCarro text-center">
-                                <button type="button" class="botaoAdicionarCarro btn btn-primary" data-bs-toggle="modal" data-bs-target="#editionModal">Add car</button>
+                                <a href="http://localhost:8080/VIEW/crud-carro.php"><button type="button" class="botaoAdicionarCarro btn btn-primary" data-bs-toggle="modal" data-bs-target="#editionModal">Add car</button></a>
                             </td>
                         </tr>
                     </table>
@@ -76,7 +76,7 @@
             </div>
             <div class="ladoDireito">
                 <div class="infoModeloCarroSelecionado">
-                    <h2 class="text-center nomeMarca">Pagani</h2>
+                    <h2 class="text-center nomeMarca">Ferrari</h2>
                     <img src="https://ecosetting-files.com/br/image/models/dJZaNo02jLQviHcLCPu2ADLHd1JfRF.PNG" alt="Pagani Huayra" class="modeloCarroImagem">
                     <h2 class="text-center nomeModeloCarro"> Huayra</h2>
                 </div>

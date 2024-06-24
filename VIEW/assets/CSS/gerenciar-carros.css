@@ -171,3 +171,9 @@ button {
   background-color: #000000 !important;
   color: #f1f1f1 !important;
 }
+
+.logo-marca {
+  position: absolute;
+  top: 27.5%;
+  right: 12%;
+}
