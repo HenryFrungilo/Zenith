@@ -1,3 +1,21 @@
+<?php
+include '../BLL/UserService.php';
+
+setcookie('nome', '', -1, '/');
+setcookie('email', '', -1, '/');
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['input-senha']) && isset($_POST['input-email'])) {
+    $senha = $_POST['input-senha'];
+    $email = $_POST['input-email'];
+
+    if (\BLL\UserService::ValidarUsuario($email, $senha)) {
+        header('Location: http://localhost:8080/VIEW/pagina-principal.php');
+    };
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -26,61 +44,66 @@
         </div>
         <div class="loginContent mt-3">
             <div class="formContent">
-                <form method="post" action="" class="card-content card">
-                    <div class="front">
-                        <h2 class="text-center">Login</h2>
-                        <div class="inputContent">
-                            <div class="col">
-                                <label for="input-usuario" class="mb-2 form-label">Nome de Usuário</label>
-                                <p>
-                                    <input id="input-usuario" name="input-usuario" class="input-group-text" type="text">
-                                </p>
-                            </div>
+                <div  class="card-content card">
+                    <form method="post" action="" class="front">
+                        <div>
+                            <h2 class="text-center">Login</h2>
+                            <div class="inputContent">
+                                <div class="col">
+                                    <label for="input-email" class="mb-2 form-label">Email do Usuário</label>
+                                    <p>
+                                        <input id="input-email" name="input-email" class="input-group-text" type="text">
+                                    </p>
+                                </div>
 
-                            <div class="col">
-                                <label for="input-senha" class="mb-2 form-label">Senha</label>
-                                <p>
-                                    <input id="input-senha" name="input-senha" class="input-group-text" type="password">
-                                </p>
+                                <div class="col">
+                                    <label for="input-senha" class="mb-2 form-label">Senha</label>
+                                    <p>
+                                        <input id="input-senha" name="input-senha" class="input-group-text" type="password">
+                                    </p>
+                                </div>
+                                <div>
+                                    <small>Não possui uma conta? <a class="cadastrar-text">Cadastre-se</a></small>
+                                </div>
                             </div>
-                            <div>
-                                <small>Não possui uma conta? <a class="cadastrar-text">Cadastre-se</a></small>
-                            </div>
+                            <button class="button botaoLogin" type="submit"> Login </button>
                         </div>
-                        <button class="button botaoLogin" type="submit"> Login </button>
-                    </div>
-                    <div class="back">
-                        <h2 class="text-center" id="texto-cadastro">Cadastrar-se</h2>
-                        <div class="inputContent" id="cadastrarForm">
-                            <div class="col">
-                                <label for="input-usuario-cadastro" class="mb-2 form-label">Nome de Usuário</label>
-                                <p>
-                                    <input id="input-usuario-cadastro" name="input-usuario" class="input-group-text" type="text">
-                                </p>
+                    </form>
+                    <form method="post" action="" class="back">
+                        <div>
+                            <h2 class="text-center" id="texto-cadastro">Cadastrar-se</h2>
+                            <div class="inputContent" id="cadastrarForm">
+                                <div class="col">
+                                    <label for="input-usuario-cadastro" class="mb-2 form-label">Nome de Usuário</label>
+                                    <p>
+                                        <input id="input-usuario-cadastro" name="input-usuario" class="input-group-text" type="text">
+                                    </p>
+                                </div>
+                                <div>
+                                    <label for="input-email-cadastro" class="mb-2 form-label">Email</label>
+                                    <p>
+                                        <input id="input-email-cadastro" name="input-email" class="input-group-text" type="email">
+                                    </p>
+                                </div>
+                                <div class="col">
+                                    <label for="input-senha-cadastro" class="mb-2 form-label">Senha</label>
+                                    <p>
+                                        <input id="input-senha-cadastro" name="input-senha" class="input-group-text" type="password">
+                                    </p>
+                                </div>
+                                <div>
+                                    <small>Já possui uma conta? <a class="entrar-text">Entrar</a></small>
+                                </div>
                             </div>
-                            <div>
-                                <label for="input-email-cadastro" class="mb-2 form-label">Email</label>
-                                <p>
-                                    <input id="input-email-cadastro" name="input-email" class="input-group-text" type="email">
-                                </p>
-                            </div>
-                            <div class="col">
-                                <label for="input-senha-cadastro" class="mb-2 form-label">Senha</label>
-                                <p>
-                                    <input id="input-senha-cadastro" name="input-senha" class="input-group-text" type="password">
-                                </p>
-                            </div>
-                            <div>
-                                <small>Já possui uma conta? <a class="entrar-text">Entrar</a></small>
-                            </div>
+                            <button class="button botaoLogin" type="submit"> Cadastrar-se </button>
                         </div>
-                        <button class="button botaoLogin" type="submit"> Cadastrar-se </button>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
     <script src="./assets/JS/flipCard.js"></script>
+    <script src="./assets/JS/verificacao.js"></script>
 </body>
 
 </html>
